@@ -155,16 +155,16 @@ public class ap1 {
 
     public String[] wordsWithout(String[] words, String target) {
         int size = 0;
-        for (int i = 0; i < words.length; i++) {
-            if (words[i] != target) {
+        for (String word : words) {
+            if (word != target) {
                 size++;
             }
         }
         String[] newWords = new String[size];
         int pos = 0;
-        for (int i = 0; i < words.length; i++) {
-            if (words[i] != target) {
-                newWords[pos] = words[i];
+        for (String word : words) {
+            if (!word.equals(target)) {
+                newWords[pos] = word;
                 pos++;
             }
         }
